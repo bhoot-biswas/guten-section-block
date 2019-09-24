@@ -1,12 +1,23 @@
-const { createElement } = wp.element;
-export default function Section({tagName, className, style, children}){ 
+const {
+	createElement
+} = wp.element;
+export default function Section({
+	tagName,
+	className,
+	style,
+	children
+}) {
 
 	return createElement(
-		tagName,
-		{
+		tagName, {
 			className: className,
 			style: style
 		},
-		children
+		createElement(
+			'div', {
+				className: 'container',
+			},
+			children
+		)
 	)
 }
