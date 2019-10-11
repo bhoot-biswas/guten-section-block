@@ -14,7 +14,7 @@ import blockAttributes from './attributes'
 
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 const { __ } = wp.i18n; // Import __() from wp.i18n
-const { 
+const {
 	withFallbackStyles,
 } = wp.components;
 const { compose } = wp.compose;
@@ -60,6 +60,7 @@ registerBlockType( 'mkl/section-block', {
 	],
 	attributes: blockAttributes,
 	supports: {
+        anchor: true,
 		align: [ 'wide', 'full' ], // Support Wide and Full alignment controls
 	},
 	/**
